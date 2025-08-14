@@ -1,0 +1,82 @@
+.dashboard-page {
+    padding: 2rem 4rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Adjust column ratio */
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.dashboard-left, .dashboard-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Specific Cards */
+.summary-card h1 { font-weight: 500; color: var(--secondary-text); }
+.summary-card .total-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-purple);
+    background-color: #f0ebff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-card h4 { font-size: 1.2rem; margin: 0; }
+.profile-card button {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Expense List & Form */
+.expense-list-card h2, .add-expense-form h3 { margin-top: 0; }
+.expense-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 0; border-bottom: 1px solid var(--border-color);
+}
+.expense-info { display: flex; align-items: center; gap: 1rem; }
+.expense-icon {
+    font-size: 1.5rem; color: var(--primary-purple); background-color: #f0ebff;
+    border-radius: 8px; padding: 8px; display: inline-flex;
+}
+.expense-details .description { font-weight: 600; }
+.expense-details .category { font-size: 0.8rem; color: var(--secondary-text); }
+.expense-amount { font-weight: 600; }
+.delete-button {
+    background: var(--delete-red-light); color: var(--delete-red);
+    border: none; border-radius: 8px; width: 30px; height: 30px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    width: 100%; border: none; border-bottom: 2px solid var(--border-color);
+    padding: 0.5rem 0; font-size: 1rem; background: transparent; box-sizing: border-box;
+}
+.form-group input:focus { outline: none; border-bottom-color: var(--primary-purple); }
+.add-expense-form button {
+    width: 100%; padding: 0.8rem; border: none; border-radius: 10px;
+    background-color: var(--primary-purple); color: white;
+    font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 1rem;
+}
