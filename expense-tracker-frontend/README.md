@@ -1,12 +1,54 @@
-# React + Vite
+# FinTrack - Expense Tracker Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the FinTrack application, a modern and responsive user interface for managing personal expenses. It is built with **React** and **Vite**, providing a fast and interactive user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+- **Dynamic UI:** A clean, component-based interface built with **React** for managing expenses.
+- **Client-Side Routing:** Seamless navigation between login, registration, and the main dashboard using **react-router-dom**.
+- **User Authentication:** Secure login and registration forms that communicate with the backend API to manage user sessions with JWTs.
+- **State Management:** Utilizes React Hooks (`useState`, `useEffect`) and the **Context API** to manage global user state and local component state.
+- **API Integration:** Uses **Axios** to communicate with the backend REST API for all data operations.
+- **Protected Routes:** Ensures that only authenticated users can access the main dashboard.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- **Framework/Library:** React.js, Vite
+- **Language:** JavaScript (ES6+)
+- **Routing:** React Router
+- **API Client:** Axios
+- **Styling:** CSS3
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js and npm (or yarn)
+
+### Setup and Run
+
+1.  **Clone the repository** (or navigate into this directory if you've cloned the parent repo).
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure the backend URL:**
+    - Create a file named `.env` in the root of this frontend project.
+    - Add the following line, pointing to your running backend server:
+    ```
+    VITE_API_URL=http://localhost:8080/api
+    ```
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+- The application will be available at `http://localhost:5173`.
