@@ -35,6 +35,13 @@ public class ExpenseController {
         return ResponseEntity.ok(expenses);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<ExpenseDto> updateExpense(@PathVariable Long id, @RequestBody ExpenseDto expenseDto, Authentication authentication) {
+        String username = authentication.getName();
+        ExpenseDto updatedExpense = expenseService.updateExpense(id, expenseDto, username);
+        return ResponseEntity.ok(updatedExpense);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteExpense(@PathVariable Long id, Authentication authentication){
         String username = authentication.getName();

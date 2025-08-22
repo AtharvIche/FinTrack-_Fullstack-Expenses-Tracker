@@ -9,5 +9,6 @@ public interface ExpenseService {
     ExpenseDto createExpense(ExpenseDto expenseDto, String username);
     List<ExpenseDto> getExpensesForUser(String username);
     void deleteExpense(Long expenseId, String username);
-
+    ExpenseDto updateExpense(Long expenseId, ExpenseDto expenseDto, String username);
 }
+

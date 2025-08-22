@@ -58,6 +58,30 @@ public class ExpenseServiceImpl implements ExpenseService {
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
+    @Override
+    public ExpenseDto updateExpense(Long expenseId, ExpenseDto expenseDto, String username) {
+        Expense expense = expenseRepository.findById(expenseId)
+                .orElseThrow(() -> new RuntimeException("Expense not found"));
+
+        if (!expense.getUser().getUsername().equals(username)) {
+            throw new SecurityException("User does not have permission to update this expense");
+        }
+
+        Category category = categoryRepository.findByName(expenseDto.getCategoryName())
+                .orElseGet(() -> {
+                    Category newCategory = new Category();
+                    newCategory.setName(expenseDto.getCategoryName());
+                    return categoryRepository.save(newCategory);
+                });
+
+        expense.setDescription(expenseDto.getDescription());
+        expense.setAmount(expenseDto.getAmount());
+        expense.setDate(expenseDto.getDate());
+        expense.setCategory(category);
+
+        Expense updatedExpense = expenseRepository.save(expense);
+        return convertToDto(updatedExpense);
+    }
 
     @Override
     public void deleteExpense(Long expenseId, String username) {
