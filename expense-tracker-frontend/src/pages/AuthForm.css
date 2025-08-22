@@ -1,78 +1,56 @@
 .auth-page {
     display: flex;
-    width: 100%;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     min-height: 100vh;
+    background-color: #f0f2f5;
     font-family: sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
-/* Panel for the image/promo content */
-.auth-promo-panel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff; /* Or a light grey like #f4f6f8 */
-}
-
-.auth-promo-panel img {
-    max-width: 80%;
-    height: auto;
-}
-
-/* Panel for the form */
-.auth-form-panel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #007bff; /* The blue background */
-    padding: 2rem;
-}
-
-.auth-form {
-    background: white;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-.auth-form h2 {
+.brand-header {
     text-align: center;
-    color: #333;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.auth-form .subtitle {
-    text-align: center;
-    color: #777;
     margin-bottom: 2rem;
 }
 
+.brand-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+}
+
+.auth-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* ... (form styles like .form-group, button, etc., remain mostly the same) ... */
 .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     color: #555;
     font-weight: 500;
 }
-
 .form-group input {
     width: 100%;
-    padding: 0.8rem 1rem;
-    border: 1px solid #ddd;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
-    font-size: 1rem;
 }
-
-.auth-form button {
+.auth-form-container button {
     width: 100%;
     padding: 0.8rem;
     border: none;
@@ -82,11 +60,66 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 1rem;
+    transition: background-color 0.2s;
 }
-
-.auth-form .extra-links {
-    text-align: center;
+.auth-form-container button:hover {
+    background-color: #0056b3;
+}
+.auth-form-container p {
     margin-top: 1.5rem;
     font-size: 0.9rem;
 }
+.error-message {
+    color: #dc3545;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.creator-footer {
+    position: absolute;
+    bottom: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 480px) {
+    .auth-form-container {
+        padding: 2rem 1.5rem;
+    }
+    .brand-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ... keep all your existing CSS ... */
+
+/* New styles for the brand name */
+.brand-title {
+    background: linear-gradient(90deg, #007bff, #8a2be2); /* Blue to Purple gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* New styles for the password input area */
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-container input {
+    width: 100%;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 15px; /* Position the icon inside the input field */
+    cursor: pointer;
+    color: #888;
+}
+
+/* ... keep the rest of your CSS ... */
