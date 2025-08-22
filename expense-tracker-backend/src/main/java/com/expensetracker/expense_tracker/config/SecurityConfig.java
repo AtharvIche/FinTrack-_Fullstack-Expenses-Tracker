@@ -47,8 +47,13 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // This is the URL of your React app
-        configuration.setAllowedOrigins(List.of("http://localhost:5173"));
+
+        // Add the URL of your deployed Netlify frontend
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",
+                "https://bright-mermaid-49859f.netlify.app"
+        ));
+        
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
