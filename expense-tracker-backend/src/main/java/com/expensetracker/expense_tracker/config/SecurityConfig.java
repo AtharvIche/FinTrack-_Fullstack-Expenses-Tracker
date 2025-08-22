@@ -51,7 +51,7 @@ public class SecurityConfig {
         // Add the URL of your deployed Netlify frontend
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5173",
-                "https://bright-mermaid-49859f.netlify.app"
+                "https://fintrackbyatharv.netlify.app/"
         ));
         
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
