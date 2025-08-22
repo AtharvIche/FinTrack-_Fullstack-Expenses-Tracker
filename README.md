@@ -1,6 +1,7 @@
 # FinTrack - Full-Stack Expense Tracker
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2955aea5-6900-4aa7-bcb8-5d51b10d13ce" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce3d0994-b69c-4529-ba01-45c7cf1eb424" />
+<img width="1920" height="968" alt="image" src="https://github.com/user-attachments/assets/029ce030-4583-4ff6-b3b3-c91f5ad63c40" />
+<img width="1920" height="965" alt="image" src="https://github.com/user-attachments/assets/8d6710d7-b979-4703-ab19-ef8d55094453" />
+
 
 
 
